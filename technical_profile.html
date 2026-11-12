@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balaji Vallepu — Official Technical Profile</title>
+<meta name="description" content="Technical Profile of Balaji Vallepu, MCA Data Science student at Alliance University, Bengaluru.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-dark: #0B0D0F;
+  --bg-card: #14171B;
+  --border: #2D333B;
+  --text-main: #F4F3EF;
+  --text-muted: #8B949E;
+  --accent-lime: #D9FF55;
+  --accent-cyan: #22D3EE;
+  --accent-emerald: #34D399;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-size: 15px;
+  padding: 2.5rem 1rem;
+}
+
+.profile-container {
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+/* 3D Portfolio Banner */
+.portfolio-3d-banner {
+  background: linear-gradient(135deg, rgba(217, 255, 85, 0.15) 0%, rgba(34, 211, 238, 0.08) 100%), #111418;
+  border: 1.5px solid var(--accent-lime);
+  border-radius: 14px;
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0 30px rgba(217, 255, 85, 0.15);
+  flex-wrap: wrap;
+}
+.banner-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.banner-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--accent-lime);
+  color: #0B0D0F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.banner-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.banner-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.btn-3d {
+  background: var(--accent-lime);
+  color: #0B0D0F;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(217, 255, 85, 0.4);
+}
+
+/* Header */
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+.header-info h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  margin-bottom: 0.35rem;
+}
+.header-info h2 {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-lime);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+.header-meta {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+.header-meta a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+}
+.header-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+.btn-action {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.55rem 1.1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.2s;
+}
+.btn-action:hover {
+  border-color: var(--accent-lime);
+  color: var(--accent-lime);
+}
+
+/* Section Formatting */
+.section {
+  margin-bottom: 2.25rem;
+}
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent-lime);
+  border-left: 3px solid var(--accent-lime);
+  padding-left: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Expertise Grid */
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.expertise-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.expertise-item h4 {
+  font-size: 1rem;
+  color: #FFFFFF;
+  margin-bottom: 0.4rem;
+}
+.expertise-item p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Skill Table */
+.skill-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+}
+.skill-table th, .skill-table td {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+.skill-table th {
+  background: rgba(255, 255, 255, 0.05);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--accent-lime);
+}
+.skill-table td {
+  font-size: 0.9rem;
+}
+.skill-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+/* Projects */
+.project-entry {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+.project-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.project-tech {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent-cyan);
+}
+.project-bullets {
+  list-style: none;
+  margin-top: 0.6rem;
+}
+.project-bullets li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+.project-bullets li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--accent-lime);
+}
+
+/* Education & Certs */
+.edu-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.edu-block:last-child {
+  border-bottom: none;
+}
+.edu-inst-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.edu-deg {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.edu-score-pill {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-emerald);
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+}
+
+.cert-pill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+.cert-pill-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cert-pill-item span:first-child {
+  font-size: 0.88rem;
+  color: #FFFFFF;
+}
+.cert-pill-item span:last-child {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-lime);
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+    padding: 0 !important;
+  }
+  .profile-container {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  .portfolio-3d-banner, .header-actions {
+    display: none !important;
+  }
+  .section-heading {
+    color: #000000 !important;
+    border-color: #000000 !important;
+  }
+  .header-info h1, .header-info h2 {
+    color: #000000 !important;
+  }
+  .skill-table th {
+    background: #EEEEEE !important;
+    color: #000000 !important;
+  }
+  .project-bullets li, .expertise-item p {
+    color: #333333 !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="profile-container">
+
+  <!-- 3D Portfolio Showcase Link Banner -->
+  <div class="portfolio-3d-banner">
+    <div class="banner-info">
+      <div class="banner-icon">🌐</div>
+      <div>
+        <div class="banner-title">Interactive 3D WebGL Portfolio Available</div>
+        <div class="banner-sub">Experience live 3D visual cards, Three.js particle starfield, and interactive project demos.</div>
+      </div>
+    </div>
+    <a href="profily.html" class="btn-3d">
+      <span>EXPLORE 3D PORTFOLIO</span>
+      <span>↗</span>
+    </a>
+  </div>
+
+  <!-- Header -->
+  <header class="profile-header">
+    <div class="header-info">
+      <h1>BALAJI VALLEPU</h1>
+      <h2>TECHNICAL PROFILE // DATA SCIENCE &amp; ANALYTICS</h2>
+      <div style="color:var(--text-muted);font-size:0.95rem;">MCA Candidate (2025–2027) • Alliance University, Bengaluru</div>
+      <div class="header-meta">
+        <span>📧 <a href="mailto:vallepubalaji908@gmail.com">vallepubalaji908@gmail.com</a></span>
+        <span>📍 Bengaluru, KA • Kadiri, AP</span>
+        <span>💼 <a href="https://www.linkedin.com/in/balaji-vallepu-4748b8225/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></span>
+        <span>💻 <a href="https://github.com/Balajivallepu" target="_blank" rel="noopener noreferrer">GitHub: @Balajivallepu</a></span>
+        <span>⚡ <a href="https://www.hackerrank.com/profile/bvallepuMCA25" target="_blank" rel="noopener noreferrer">HackerRank: @bvallepuMCA25</a></span>
+        <span>🌐 <a href="profily.html">3D Portfolio Link</a></span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a href="https://www.hackerrank.com/profile/bvallepuMCA25" target="_blank" rel="noopener noreferrer" class="btn-action" style="border-color:var(--accent-emerald);color:var(--accent-emerald);">⚡ HackerRank</a>
+      <a href="https://www.linkedin.com/in/balaji-vallepu-4748b8225/" target="_blank" rel="noopener noreferrer" class="btn-action" style="border-color:var(--accent-cyan);color:var(--accent-cyan);">💼 LinkedIn</a>
+      <a href="https://github.com/Balajivallepu" target="_blank" rel="noopener noreferrer" class="btn-action">💻 GitHub Profile</a>
+      <button onclick="window.print()" class="btn-action">🖨️ Print Profile</button>
+      <a href="Balaji_Vallepu_Resume.pdf" class="btn-action" download="Balaji_Vallepu_Resume.pdf" style="border-color:var(--accent-lime);color:var(--accent-lime);">↓ Download Resume</a>
+      <a href="profily.html" class="btn-action" style="border-color:var(--accent-lime);color:var(--accent-lime);">⚡ View 3D Site</a>
+    </div>
+  </header>
+
+  <!-- Summary -->
+  <section class="section">
+    <div class="section-heading">Executive Summary</div>
+    <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7;">
+      High-performing Master of Computer Applications (MCA) student in Data Science at Alliance University with an outstanding academic record (MCA CGPA: <strong>8.33 / 10</strong>, B.Sc Data Science: <strong>8.91 / 10</strong>). Technically adept across data preparation, machine learning classification and forecasting, and enterprise Power BI reporting with star-schema modeling and complex DAX calculations. Built 9 production-grade repositories and an interactive Three.js 3D WebGL portfolio.
+    </p>
+  </section>
+
+  <!-- Technical Areas of Expertise -->
+  <section class="section">
+    <div class="section-heading">Technical Areas of Expertise</div>
+    <div class="expertise-grid">
+      <div class="expertise-item">
+        <h4>1. Machine Learning &amp; Predictive Analytics</h4>
+        <p>End-to-end ML pipelines: feature scaling, outlier detection, cross-validation, Random Forest, decision trees, regression, and model evaluation metrics.</p>
+      </div>
+      <div class="expertise-item">
+        <h4>2. Business Intelligence &amp; Data Warehousing</h4>
+        <p>Designing dimensional star-schemas (Fact &amp; Dimension tables), multi-table DAX calculations (YoY growth, time intelligence), and Row-Level Security (RLS).</p>
+      </div>
+      <div class="expertise-item">
+        <h4>3. Exploratory Data Analysis &amp; ETL</h4>
+        <p>Statistical distribution profiling, data imputation, feature transformation, and automated multi-step ETL workflows using Pandas, NumPy, and Power Query.</p>
+      </div>
+      <div class="expertise-item">
+        <h4>4. Natural Language Processing &amp; Scraping</h4>
+        <p>Text tokenization, chunking, transformer summarization pipelines, HTML DOM web scraping with BeautifulSoup, and REST API integration.</p>
+      </div>
+      <div class="expertise-item">
+        <h4>5. Relational Databases &amp; SQL Querying</h4>
+        <p>Relational database architecture in MySQL &amp; SQL Server: multi-table JOINs, subqueries, Common Table Expressions (CTEs), and index optimization.</p>
+      </div>
+      <div class="expertise-item">
+        <h4>6. 3D Web &amp; Interactive Visualization</h4>
+        <p>Developing interactive 3D WebGL data visualizations using Three.js, responsive CSS3 glassmorphism, and dynamic dashboard prototypes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skill Matrix Table -->
+  <section class="section">
+    <div class="section-heading">Tools, Technologies &amp; Skill Sets</div>
+    <table class="skill-table">
+      <thead>
+        <tr>
+          <th style="width:30%;">Domain</th>
+          <th>Proficiencies, Tools &amp; Technologies</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Languages &amp; Querying</strong></td>
+          <td>Python, SQL (MySQL, SQL Server), R, C++, C, HTML5, CSS3</td>
+        </tr>
+        <tr>
+          <td><strong>Data &amp; ML Libraries</strong></td>
+          <td>Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, BeautifulSoup, Streamlit, Plotly</td>
+        </tr>
+        <tr>
+          <td><strong>BI &amp; Analytics Suites</strong></td>
+          <td>Microsoft Power BI (Desktop &amp; Service), DAX, Power Query ETL, Advanced Excel, Tableau Basics</td>
+        </tr>
+        <tr>
+          <td><strong>Database Architecture</strong></td>
+          <td>Dimensional Modeling, Star Schema Architecture, Fact &amp; Dimension Tables, Relational Schema Normalization</td>
+        </tr>
+        <tr>
+          <td><strong>Developer Environments</strong></td>
+          <td>Git, GitHub, VS Code, Jupyter Notebooks, Google Colab</td>
+        </tr>
+        <tr>
+          <td><strong>3D &amp; UI Technologies</strong></td>
+          <td>Three.js (WebGL 3D Rendering), Modern CSS3 Glassmorphism, Parallax 3D Card Physics</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 3D Portfolio Details -->
+  <section class="section">
+    <div class="section-heading">3D Interactive Portfolio Architecture</div>
+    <div style="background:rgba(217, 255, 85, 0.05);border:1px solid rgba(217, 255, 85, 0.3);border-radius:12px;padding:1.25rem 1.5rem;">
+      <p style="font-size:0.92rem;color:var(--text-main);margin-bottom:0.75rem;">
+        As recommended for high-impact technical demonstrations, a dedicated <strong>3D Interactive Portfolio</strong> has been deployed at <a href="profily.html" style="color:var(--accent-lime);font-weight:700;">profily.html</a> featuring:
+      </p>
+      <ul class="project-bullets">
+        <li><strong>Three.js (WebGL) 3D Canvas:</strong> Real-time animated Torus Knot and Octahedron with a 700-particle constellation reacting to mouse coordinates.</li>
+        <li><strong>Physics-Based 3D Photo Card:</strong> Cursor-tracking perspective tilt, dynamic specular glare reflection, and embedded floating credential chips.</li>
+        <li><strong>Live Filterable Project Suite:</strong> Real-time client-side project filtering across AI/ML, Power BI Analytics, and NLP.</li>
+        <li><strong>Glassmorphic System:</strong> Multi-layer frosted glass cards with high-voltage electric lime glow accents and interactive click shockwaves.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section">
+    <div class="section-heading">Featured Technical Projects (9 Repositories)</div>
+    
+    <div class="project-entry">
+      <div class="project-top">
+        <div class="project-name">1. AI-Powered Fake Job Posting Detection</div>
+        <div class="project-tech">Python · Scikit-learn · Pandas · Streamlit</div>
+      </div>
+      <ul class="project-bullets">
+        <li>Trained a Random Forest classification pipeline on 17,880+ job listings to flag fraudulent listings with high precision.</li>
+        <li>Built an interactive Streamlit application allowing users to input job descriptions and view prediction probabilities.</li>
+      </ul>
+    </div>
+
+    <div class="project-entry">
+      <div class="project-top">
+        <div class="project-name">2. Stock Market Prediction &amp; Live Analytics Dashboard</div>
+        <div class="project-tech">Python · Streamlit · Scikit-learn · Plotly · Alpha Vantage API</div>
+      </div>
+      <ul class="project-bullets">
+        <li>Engineered real-time price feeds for NSE, BSE, and US markets with technical indicators (RSI, MACD, Bollinger Bands).</li>
+        <li>Trained ML models for 1–14 day price forecasting and integrated an AI chatbot answering equity queries.</li>
+      </ul>
+    </div>
+
+    <div class="project-entry">
+      <div class="project-top">
+        <div class="project-name">3. Retail Business Analytics &amp; Star-Schema Sales Warehouse</div>
+        <div class="project-tech">MySQL · Power BI · DAX · Power Query · Star Schema</div>
+      </div>
+      <ul class="project-bullets">
+        <li>Transformed transaction records in MySQL into a 1-Fact/4-Dimension star schema and developed multi-tier DAX metrics.</li>
+        <li>Built a 5-page enterprise report with Row-Level Security (RLS) and what-if parameter sensitivity analysis.</li>
+      </ul>
+    </div>
+
+    <div class="project-entry">
+      <div class="project-top">
+        <div class="project-name">4. Marketing Campaign Performance &amp; Attribution Suite</div>
+        <div class="project-tech">Power BI · Power Query · DAX</div>
+      </div>
+      <ul class="project-bullets">
+        <li>Analyzed 200,000 campaign records to calculate CTR, ROAS, CPC, and CPA metrics across marketing channels.</li>
+      </ul>
+    </div>
+
+    <div class="project-entry">
+      <div class="project-top">
+        <div class="project-name">5. Corporate Finance KPI &amp; Budget Variance Analysis</div>
+        <div class="project-tech">Power BI · DAX · Excel</div>
+      </div>
+      <ul class="project-bullets">
+        <li>Modeled department budget allocations vs. actual expenditures with conditional variance alerts and financial drilldown matrix.</li>
+      </ul>
+    </div>
+
+    <div class="project-entry">
+      <div class="project-top">
+        <div class="project-name">6. IBM HR Workforce Attrition Diagnostic</div>
+        <div class="project-tech">Power BI · Power Query · DAX</div>
+      </div>
+      <ul class="project-bullets">
+        <li>Identified core employee turnover determinants and demographic trends using multi-dimensional cross-filtering.</li>
+      </ul>
+    </div>
+
+    <div class="project-entry">
+      <div class="project-top">
+        <div class="project-name">7. Student Learning Performance Analytics</div>
+        <div class="project-tech">Power BI · Power Query · DAX</div>
+      </div>
+      <ul class="project-bullets">
+        <li>Executed statistical EDA on 500 academic records, establishing performance tiers to guide early faculty interventions.</li>
+      </ul>
+    </div>
+
+    <div class="project-entry">
+      <div class="project-top">
+        <div class="project-name">8. YouTube Video NLP Summarizer</div>
+        <div class="project-tech">Python · NLP Transformers · Streamlit</div>
+      </div>
+      <ul class="project-bullets">
+        <li>Engineered an autonomous closed-caption extraction and text chunking summarization pipeline without paid APIs.</li>
+      </ul>
+    </div>
+
+    <div class="project-entry">
+      <div class="project-top">
+        <div class="project-name">9. Business Data Analysis Dashboard</div>
+        <div class="project-tech">Power BI · SQL · Excel</div>
+      </div>
+      <ul class="project-bullets">
+        <li>Standardized unstructured data flows into structured SQL views and dynamic Power BI executive visual narratives.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section">
+    <div class="section-heading">Academic History</div>
+    <div class="edu-block">
+      <div>
+        <div class="edu-inst-name">Alliance University, Bengaluru</div>
+        <div class="edu-deg">Master of Computer Applications (MCA) — Data Science</div>
+      </div>
+      <div style="text-align:right;">
+        <span class="edu-score-pill">8.33 / 10 CGPA</span>
+        <div style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;">2025 – 2027</div>
+      </div>
+    </div>
+    <div class="edu-block">
+      <div>
+        <div class="edu-inst-name">Sree Matha Jayalakshmi Degree College, Kadiri</div>
+        <div class="edu-deg">Bachelor of Science (B.Sc) — Computer Science</div>
+      </div>
+      <div style="text-align:right;">
+        <span class="edu-score-pill">8.91 Data Science CGPA</span>
+        <div style="font-size:0.8rem;color:var(--text-muted);margin-top:4px;">2019 – 2025</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="section">
+    <div class="section-heading">Verified Industry Certifications</div>
+    <div class="cert-pill-grid">
+      <div class="cert-pill-item">
+        <span>Python for Data Science, AI &amp; Development</span>
+        <span>IBM</span>
+      </div>
+      <div class="cert-pill-item">
+        <span>Data Analysis and Visualization with Power BI</span>
+        <span>Microsoft</span>
+      </div>
+      <div class="cert-pill-item">
+        <span>Machine Learning with Python &amp; Statistics</span>
+        <span>EDUCBA</span>
+      </div>
+      <div class="cert-pill-item">
+        <span>Data Analysis Using Python</span>
+        <span>Univ. of Pennsylvania</span>
+      </div>
+      <div class="cert-pill-item">
+        <span>Introduction to Databases</span>
+        <span>Meta</span>
+      </div>
+      <div class="cert-pill-item">
+        <span>Neural Networks and Deep Learning</span>
+        <span>DeepLearning.AI</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
